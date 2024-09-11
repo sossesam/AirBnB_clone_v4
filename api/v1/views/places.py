@@ -13,7 +13,7 @@ from flasgger.utils import swag_from
 
 @app_views.route('/cities/<city_id>/places', methods=['GET'],
                  strict_slashes=False)
-@swag_from('documentation/place/get_places.yml', methods=['GET'])
+#@swag_from('documentation/place/get_places.yml', methods=['GET'])
 def get_places(city_id):
     """
     Retrieves the list of all Place objects of a City
@@ -29,7 +29,7 @@ def get_places(city_id):
 
 
 @app_views.route('/places/<place_id>', methods=['GET'], strict_slashes=False)
-@swag_from('documentation/place/get_place.yml', methods=['GET'])
+#@swag_from('documentation/place/get_place.yml', methods=['GET'])
 def get_place(place_id):
     """
     Retrieves a Place object
@@ -43,7 +43,7 @@ def get_place(place_id):
 
 @app_views.route('/places/<place_id>', methods=['DELETE'],
                  strict_slashes=False)
-@swag_from('documentation/place/delete_place.yml', methods=['DELETE'])
+#@swag_from('documentation/place/delete_place.yml', methods=['DELETE'])
 def delete_place(place_id):
     """
     Deletes a Place Object
